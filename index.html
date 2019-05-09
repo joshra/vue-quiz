@@ -24,10 +24,10 @@
       <div class="col card">
         <div class="card-body">
           <h4>{{ quizzes[currentQuiz].description }}</h4>
-          <p @click="check(quizzes[currentQuiz], 1)">{{ quizzes[currentQuiz].option1 }}</p>
-          <p @click="check(quizzes[currentQuiz], 2)">{{ quizzes[currentQuiz].option2 }}</p>
-          <p @click="check(quizzes[currentQuiz], 3)">{{ quizzes[currentQuiz].option3 }}</p>
-          <p @click="check(quizzes[currentQuiz], 4)">{{ quizzes[currentQuiz].option4 }}</p>
+          <p @click="check(quizzes[currentQuiz], 1)">&rArr;{{ quizzes[currentQuiz].option1 }}</p>
+          <p @click="check(quizzes[currentQuiz], 2)">&rArr;{{ quizzes[currentQuiz].option2 }}</p>
+          <p @click="check(quizzes[currentQuiz], 3)">&rArr;{{ quizzes[currentQuiz].option3 }}</p>
+          <p @click="check(quizzes[currentQuiz], 4)">&rArr;{{ quizzes[currentQuiz].option4 }}</p>
           <div v-if="is_right_answer"><button @click="getRandomQuizNum()">答對了!! 再來一題</button></div>
         </div>
       </div>
