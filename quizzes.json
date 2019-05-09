@@ -1,0 +1,38 @@
+[
+  {
+    "type": "基本題",
+    "description": "以下何者不是國家公園",
+    "option1":"壽山",
+    "option2":"玉山",
+    "option3":"太魯",
+    "option4":"雪霸",
+    "answer": 1
+  },
+  {
+    "type": "",
+    "description": "",
+    "option1":"",
+    "option2":"",
+    "option3":"",
+    "option4":"",
+    "answer": null
+  },
+  {
+    "type": "",
+    "description": "",
+    "option1":"",
+    "option2":"",
+    "option3":"",
+    "option4":"",
+    "answer": null
+  },
+  {
+    "type": "",
+    "description": "",
+    "option1":"",
+    "option2":"",
+    "option3":"",
+    "option4":"",
+    "answer": null
+  }
+]
