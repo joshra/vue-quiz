@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        currentQuiz: 0,
         quizzes:[
             {
                 'type': '',
@@ -17,7 +18,7 @@ var app = new Vue({
     mounted () {
         axios
             .get('quizzes.json')
-            .then(response => (this.quizzes = response.data))
+            .then(response => {this.quizzes = response.data;this.currentQuiz=Math.floor(Math.random()*this.quizzes.length);});
     },
     methods: {
         check: function (quiz, opt_num) {
@@ -26,6 +27,10 @@ var app = new Vue({
             }else{
                 this.is_right_answer=false;
             }
+        },
+        getRandomQuizNum: function () {
+            this.is_right_answer=null;
+            this.currentQuiz = Math.floor(Math.random()*this.quizzes.length);
         }
     }
 })

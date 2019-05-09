@@ -19,16 +19,17 @@
   <body>
   <div class="container" id="app">
     <h1 class="text-center">評量單元</h1>
+    <span>本題庫目前共{{quizzes.length}}題</span>
     <div class="row justify-content-center"></div>
       <div class="col card">
-        <h3 calss="card-body">{{ quizzes[0].description }}</h3>
-        <h4 @click="check(quizzes[0], 1)">{{ quizzes[0].option1 }}</h4>
-        <h4 @click="check(quizzes[0], 2)">{{ quizzes[0].option2 }}</h4>
-        <h4 @click="check(quizzes[0], 3)">{{ quizzes[0].option3 }}</h4>
-        <h4 @click="check(quizzes[0], 4)">{{ quizzes[0].option4 }}</h4>
-        <h4 v-if="is_right_answer">答對了!!</h4>
-
-
+        <div class="card-body">
+          <h4>{{ quizzes[currentQuiz].description }}</h4>
+          <p @click="check(quizzes[currentQuiz], 1)">{{ quizzes[currentQuiz].option1 }}</p>
+          <p @click="check(quizzes[currentQuiz], 2)">{{ quizzes[currentQuiz].option2 }}</p>
+          <p @click="check(quizzes[currentQuiz], 3)">{{ quizzes[currentQuiz].option3 }}</p>
+          <p @click="check(quizzes[currentQuiz], 4)">{{ quizzes[currentQuiz].option4 }}</p>
+          <div v-if="is_right_answer"><button @click="getRandomQuizNum()">答對了!! 再來一題</button></div>
+        </div>
       </div>
   </div>
 
